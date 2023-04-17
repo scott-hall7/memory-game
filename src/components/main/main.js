@@ -32,7 +32,6 @@ const Main = () => {
         }
 
         const beginGame = () => {
-            console.log('hi')
             setStartGame(true)
         }
 
@@ -63,9 +62,7 @@ const Main = () => {
             setClickedSpaceCards([])
             setCurrentScore(0);
         }
-
         
-    
     return (
         <div className="main-container">
             <StartModal display={startGame} onClick={beginGame} />
