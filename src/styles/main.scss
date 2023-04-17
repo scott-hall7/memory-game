@@ -1,11 +1,10 @@
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -19,37 +18,28 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: rgb(21, 16, 61);
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -57,7 +47,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
    scroll-behavior: auto;
@@ -78,7 +67,6 @@ select {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: rgb(21, 16, 61);
 }
 
 .main-container {
@@ -92,13 +80,28 @@ select {
 
 .scoreboard-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+}
+
+.title-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.title-container p {
+  text-align: center;
 }
 
 .scoreboard {
-  padding: 10px;
+  padding: 15px;
   background-color: rgb(209, 209, 209);
-  border-radius: 5px;
+  border-radius: 30px;
+}
+
+.scoreboard p   {
+  text-align: center;
 }
 
 #current-scoreboard  {
@@ -112,7 +115,6 @@ select {
 .gamecard-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -120,7 +122,7 @@ select {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  box-shadow: rgba(255, 255, 255, 0.548) 0px 3px 13px 0px;
+  box-shadow: rgba(255, 255, 255, 0.548) 0px 0px 1px 3px;
 }
 
 .space-card-image:hover  {
@@ -128,22 +130,59 @@ select {
   transform: scale(1.05);
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background-color: rgb(44, 44, 151);
-  color: white;
+@media only screen and (max-width: 900px)  {
+  .scoreboard-container {
+    gap: 15px;
+  }
+  
+  .gamecard-container  {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  .space-card-image  {
+    width: 100px;
+    height: 100px;
+  }
+
+  .start-modal  {
+    width: 300px !important;
+    top: 30% !important;
+  }
+
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  color: white;
+.disable-click  {
+  pointer-events: none;
 }
 
+.hide-display {
+  display: none !important;
+}
+
+.start-modal  {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: rgb(228, 228, 228);
+  width: 400px;
+  padding: 50px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 20px rgb(255, 255, 255); 
+}
+
+#accept-mission   {
+  background-color: rgb(93, 170, 112);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#accept-mission:hover   {
+  cursor: pointer;
+  background-color: rgb(75, 155, 95);
+}

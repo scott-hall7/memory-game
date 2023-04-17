@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-        <h3>Space Spotter</h3>
+        <h1>Space Spotter</h1>
     </header>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const ScoreContainer = (props) => {
     return (
@@ -6,8 +6,11 @@ const ScoreContainer = (props) => {
         <div className="scoreboard" id="current-scoreboard">
           <p>Current Score: {props.currentScore}</p>
         </div>
+        <div className="title-container">
+          <p>{props.title}</p>
+        </div>
         <div className="scoreboard" id="high-scoreboard">
-          <p>High Score:{props.highScore}</p>
+          <p>High Score: {props.highScore}</p>
         </div>
       </div>
     )
