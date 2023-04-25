@@ -11,3 +11,6 @@ Space Spotter is a memory game created with React. The goal of the game is to cl
 
  ## Live Demo
 [Deployment](https://scott-hall7.github.io/memory-game/)
+
+## Project Display
+![Space Spotter Screenshot](https://github.com/scott-hall7/memory-game/blob/main/src/preview.png "App Preview")
